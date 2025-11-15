@@ -1,0 +1,122 @@
+src/main/
+├── java/
+│   └── com/
+│       └── bookapp/
+│           ├── model/
+│           │   └── Book.java
+│           ├── dao/
+│           │   └── BookDao.java
+│           └── servlets/
+│               ├── HomeServlet.java
+│               ├── AllBooksServlet.java
+│               └── AddBookServlet.java
+├── resources/
+│   ├── template/
+│   │   ├── index.ftlh
+│   │   ├── all-books.ftlh
+│   │   └── add-book.ftlh
+│   └── database.properties
+└── webapp/
+    └── WEB-INF/
+        └── web.xml
+
+<servlet-name>freemarker</servlet-name>
+        <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
+
+
+
+        <!--<?xml version="1.0" encoding="UTF-8"?>-->
+        <!--<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"-->
+        <!--         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+        <!--         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee-->
+        <!--   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">-->
+
+        <!--    <display-name>bookapp</display-name>-->
+
+        <!--    <session-config>-->
+        <!--        <session-timeout>60</session-timeout>-->
+        <!--    </session-config>-->
+
+        <!--    <servlet>-->
+        <!--        <servlet-name>freemarker</servlet-name>-->
+        <!--        <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>-->
+
+        <!--        &lt;!&ndash;-->
+        <!--          Init-param documentation:-->
+        <!--          https://freemarker.apache.org/docs/api/freemarker/ext/servlet/FreemarkerServlet.html-->
+        <!--        &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; FreemarkerServlet settings: &ndash;&gt;-->
+        <!--        <init-param>-->
+        <!--            <param-name>TemplatePath</param-name>-->
+        <!--            <param-value>classpath:template</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>NoCache</param-name>-->
+        <!--            <param-value>true</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>ResponseCharacterEncoding</param-name>-->
+        <!--            &lt;!&ndash; Use the output_encoding setting of FreeMarker: &ndash;&gt;-->
+        <!--            <param-value>fromTemplate</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>ExceptionOnMissingTemplate</param-name>-->
+        <!--            &lt;!&ndash; true => HTTP 500 on missing template, instead of HTTP 404. &ndash;&gt;-->
+        <!--            <param-value>true</param-value>-->
+        <!--        </init-param>-->
+
+        <!--        &lt;!&ndash; FreeMarker engine settings: &ndash;&gt;-->
+        <!--        <init-param>-->
+        <!--            <param-name>incompatible_improvements</param-name>-->
+        <!--            <param-value>2.3.31</param-value>-->
+        <!--            &lt;!&ndash;-->
+        <!--              Recommended to set to a high value.-->
+        <!--              See: https://freemarker.apache.org/docs/pgui_config_incompatible_improvements.html-->
+        <!--            &ndash;&gt;-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>template_exception_handler</param-name>-->
+        <!--            &lt;!&ndash; Use "html_debug" during development! &ndash;&gt;-->
+        <!--            <param-value>rethrow</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>template_update_delay</param-name>-->
+        <!--            &lt;!&ndash; Use 0 during development! Consider what value you need otherwise. &ndash;&gt;-->
+        <!--            <param-value>30 s</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>default_encoding</param-name>-->
+        <!--            &lt;!&ndash; The encoding of the template files: &ndash;&gt;-->
+        <!--            <param-value>UTF-8</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>output_encoding</param-name>-->
+        <!--            &lt;!&ndash; The encoding of the template output; Note that you must set-->
+        <!--                 "ResponseCharacterEncodring" to "fromTemplate" for this to work! &ndash;&gt;-->
+        <!--            <param-value>UTF-8</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>locale</param-name>-->
+        <!--            &lt;!&ndash; Influences number and date/time formatting, etc. &ndash;&gt;-->
+        <!--            <param-value>ru</param-value>-->
+        <!--        </init-param>-->
+        <!--        <init-param>-->
+        <!--            <param-name>number_format</param-name>-->
+        <!--            <param-value>0.##########</param-value>-->
+        <!--        </init-param>-->
+
+        <!--        <load-on-startup>1</load-on-startup>-->
+        <!--    </servlet>-->
+
+        <!--&lt;!&ndash;    <servlet-mapping>&ndash;&gt;-->
+        <!--&lt;!&ndash;        <servlet-name>freemarker</servlet-name>&ndash;&gt;-->
+        <!--&lt;!&ndash;        <url-pattern>*.ftl</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;        <url-pattern>*.ftlxxx</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;        &lt;!&ndash; HTML and XML auto-escaped if incompatible_improvements >= 2.3.24: &ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;        <url-pattern>*.ftlh</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;        <url-pattern>*.ftlx</url-pattern>&ndash;&gt;-->
+        <!--&lt;!&ndash;    </servlet-mapping>&ndash;&gt;-->
+
+
+        <!--</web-app>-->
